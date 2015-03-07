@@ -11,5 +11,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     sudo yum groupinstall -y "Development Tools"
     sudo yum-builddep -y /vagrant/aurora.spec
   EOF
-  config.vm.provision "shell", path: "build.sh", args: ["/vagrant"]
+
+  config.vm.provision "shell",
+    path:        "build.sh",
+    args:        ["/vagrant"],
+    privileged:  false
 end
