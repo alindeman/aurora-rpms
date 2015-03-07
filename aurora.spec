@@ -21,6 +21,7 @@ failure, Aurora intelligently reschedules those jobs onto healthy machines.
 
 %package scheduler
 Summary: Master schedule for Aurora
+Requires: mesos
 
 %description scheduler
 Provides the master scheduler for Aurora.
@@ -33,6 +34,7 @@ Provides tools for interacting with the Aurora scheduler.
 
 %package thermos
 Summary: A simple Pythonic process management framework for Mesos chroots
+Requires: mesos
 
 %description thermos
 Provides the Thermos process management framework.
