@@ -8,6 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "shell", inline: <<-EOF
     sudo yum install -y rpmdevtools rpmlint yum-utils
+    sudo yum groupinstall -y "Development Tools"
     sudo yum-builddep -y /vagrant/aurora.spec
   EOF
   config.vm.provision "shell", path: "build.sh", args: ["/vagrant"]
