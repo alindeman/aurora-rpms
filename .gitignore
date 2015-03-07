@@ -1,4 +1,7 @@
 .vagrant/
 
+gradle*.zip
+gradle/
+
 RPMS/
 SRPMS/
