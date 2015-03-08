@@ -19,6 +19,7 @@ export GRADLE_HOME=$dir/gradle/gradle-${GRADLE_VERSION}
 export PATH=$PATH:$dir/gradle/gradle-${GRADLE_VERSION}/bin
 
 rpmdev-setuptree
+trap rpmdev-wipetree EXIT
 
 rpmlint aurora.spec || exit 1
 spectool -g -R aurora.spec
